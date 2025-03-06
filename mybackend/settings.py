@@ -14,6 +14,7 @@ from pathlib import Path
 from mongoengine import connect
 from decouple import config
 
+
 connect(
     db='gma-user',
     host=config('MONGO_URI', default='mongodb+srv://keanugma:uLaHaWKB1ppuG5tC@gmacluster.sedo2.mongodb.net/?retryWrites=true&w=majority&appName=GMACluster')
