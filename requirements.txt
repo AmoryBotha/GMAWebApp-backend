@@ -14,4 +14,4 @@ whitenoise==6.7.0
 mongoengine
 python-decouple
 djangorestframework
-corsheaders
+django-cors-headers
