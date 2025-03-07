@@ -81,7 +81,7 @@ def register_user_in_dataverse(first_name, last_name, mobile_number, email, pass
         response.raise_for_status()
 
         return {"location": response.headers.get("OData-EntityId", "")}  # ✅ Return user_id from Location header
-
+        localStorage.getItem("userProfileId")
     except requests.RequestException as e:
         print(f"❌ Dataverse API error: {str(e)}")
         return {"error": f"Dataverse API error: {str(e)}"}
