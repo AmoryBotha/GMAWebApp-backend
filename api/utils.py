@@ -17,7 +17,7 @@ def generate_reset_token(email):
     return token
 
 def send_reset_email(email, reset_token):
-    reset_link = f"/reset-password"
+    reset_link = f"http://127.0.0.1:3000/reset-password?token={reset_token}"
     subject = "Password Reset Request"
     message = f"Click the link below to reset your password:\n\n{reset_link}\n\nThis link will expire in 30 minutes."
     from_email = settings.DEFAULT_FROM_EMAIL

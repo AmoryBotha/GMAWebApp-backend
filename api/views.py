@@ -100,7 +100,7 @@ def login(request):
     return Response({"message": "Login successful", "token": token}, status=status.HTTP_200_OK)
     
 def send_reset_email(email, token):
-    reset_link = f"/reset-password"
+    reset_link = f"http://127.0.0.1:3000/reset-password?token={token}"
     subject = "Password Reset Request"
     message = f"""
     Hello,
