@@ -100,7 +100,7 @@ def login(request):
     return Response({"message": "Login successful", "token": token}, status=status.HTTP_200_OK)
     
 def send_reset_email(email, token):
-    reset_link = f"https://gmawebapp-backend.onrender.com/api/reset-password?token={token}"
+    reset_link = f"https://gmawebapp-frontend.onrender.com/reset-password?token={token}"
     subject = "Password Reset Request"
     message = f"""
     Hello,
